@@ -8,7 +8,7 @@ import pages.ConfirmationPage;
 import test.components.BaseTest;
 
 
-public class addToCartTest extends BaseTest {
+public class AddToCartTest extends BaseTest {
 
     @Test(dataProvider = "testData")
     public void checkOrderAddingInCart(String productName) {

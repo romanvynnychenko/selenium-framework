@@ -2,12 +2,10 @@ package test.components;
 
 import common.CommonActions;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
 
@@ -16,7 +14,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static common.Config.CLEAR_COOKIES_AND_STORAGE;
 import static constants.Constant.Urls.AMAZON_HOME_URL;
 
 public class BaseTest {
@@ -28,7 +25,7 @@ public class BaseTest {
         return new HomePage(driver);
     }
     @BeforeMethod
-    public void launchApp() {
+    public void launchApp() throws IOException {
         driver = CommonActions.initDriver();
     }
 

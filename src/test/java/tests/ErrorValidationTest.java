@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import test.components.BaseTest;
 
-public class ErrorValidationsTest extends BaseTest {
+public class ErrorValidationTest extends BaseTest {
 
     @Test(dataProvider = "getData")
     public void productNotFoundValidation(String productName, String expectedResult) {
@@ -22,7 +22,6 @@ public class ErrorValidationsTest extends BaseTest {
                 {"errortest", "false"},
                 {"mug", "true"},
                 {"wrongtext", "true"}
-
         };
     }
 }
